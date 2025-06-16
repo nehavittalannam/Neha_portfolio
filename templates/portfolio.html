@@ -621,7 +621,7 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
       appendMessage('You', msg, true);
       input.value = '';
       appendMessage('Santy', '<span style="color:#aaa;">Typing...</span>', false, true);
-      const res = await fetch('http://localhost:5000/chat', {
+      const res = await fetch('https://neha-portfolio-c76h.onrender.com/chat', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({message: msg})

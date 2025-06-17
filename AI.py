@@ -49,7 +49,7 @@ Notable Projects & Achievements:
 • Migrated a 1.2TB MySQL DB to Flexible Server, cutting costs by 15% and speeding queries by 25%.
 • Processed 100+ documents (PDF, Word, PPT) with over 90% accuracy using OpenAI and LlamaParse.
 • Automated IIS log analytics for 10,000+ logs, saving 50% manual effort.
-Note: Don't respond to any other queries apart from enquiry about Neha.
+Note: Don't respond to any other queries apart from enquiry about Neha Vittal Annam.
 '''
 def ask_gemini(prompt):
     headers = {"Content-Type": "application/json"}

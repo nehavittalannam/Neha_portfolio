@@ -348,7 +348,8 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
           </div>
           <div class="col-md-4">
             <div class="card">
-              <img src="static/images/crawling.png" class="card-img-top" alt="Quiz Game" />
+              <img src= "{{ url_for('static', filename='static/images/crawling.png') }}" class="card-img-top" alt="Quiz Game" />
+              
               <div class="card-body">
                 <h5 class="card-title">Web Scraping</h5>
                 <p class="card-text">
@@ -360,11 +361,12 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
           </div>
           <div class="col-md-4">
             <div class="card">
-              <img
-                src="static/static/images/ai-brain.png"
+              <img 
+                src= "{{ url_for('static', filename='static/images/ai-brain.png') }}"
                 class="card-img-top"
                 alt="Web Scraping"
               />
+             
               <div class="card-body">
                 <h5 class="card-title">Autogen-Agentic AI</h5>
                 <p class="card-text">
@@ -384,7 +386,7 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
             <div class="col-md-4">
               <div class="card">
                 <img
-                  src="images\data-migration.png"
+                  src= "{{ url_for('static', filename='static/images/data-migration.png') }}"
                   class="card-img-top"
                   alt="Dementia Detection"
                 />
@@ -400,7 +402,9 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
             </div>
             <div class="col-md-4">
               <div class="card">
-                <img src="static/images/blog.png" class="card-img-top" alt="Quiz Game" />
+                <img src= "{{ url_for('static', filename='static/images/blog.png') }}" class="card-img-top" alt="Quiz Game" />
+                 
+                
                 <div class="card-body">
                   <h5 class="card-title">Blogs Published</h5>
                   <p class="card-text">
@@ -414,10 +418,11 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
             <div class="col-md-4">
               <div class="card">
                 <img
-                  src="static/images/logs.png"
+                  src= "{{ url_for('static', filename='static/images/logs.png') }}"
                   class="card-img-top"
                   alt="Web Scraping"
                 />
+               
                 <div class="card-body">
                   <h5 class="card-title">IIS Log Analytics</h5>
                   <p class="card-text">

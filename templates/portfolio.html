@@ -57,7 +57,7 @@
 
       /* Hero Section */
       header {
-        background: url("{{ url_for('static', filename='static/images/paint.png') }}") no-repeat center center/cover;
+        background: url("{{ url_for('static', filename='images/paint.png') }}") no-repeat center center/cover;
         height: 100vh;
         color: white;
         display: flex;
@@ -333,7 +333,7 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
         <div class="row g-4">
           <div class="col-md-4">
             <div class="card">
-              <img src="{{ url_for('static', filename='static/images/file.png') }}"
+              <img src="{{ url_for('static', filename='images/file.png') }}"
                 class="card-img-top"
                 alt="Dementia Detection"
               />
@@ -348,7 +348,7 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
           </div>
           <div class="col-md-4">
             <div class="card">
-              <img src= "{{ url_for('static', filename='static/images/crawling.png') }}" class="card-img-top" alt="Quiz Game" />
+              <img src= "{{ url_for('static', filename='images/crawling.png') }}" class="card-img-top" alt="Quiz Game" />
               
               <div class="card-body">
                 <h5 class="card-title">Web Scraping</h5>
@@ -362,7 +362,7 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
           <div class="col-md-4">
             <div class="card">
               <img 
-                src= "{{ url_for('static', filename='static/images/ai-brain.png') }}"
+                src= "{{ url_for('static', filename='images/ai-brain.png') }}"
                 class="card-img-top"
                 alt="Web Scraping"
               />
@@ -386,7 +386,7 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
             <div class="col-md-4">
               <div class="card">
                 <img
-                  src= "{{ url_for('static', filename='static/images/data-migration.png') }}"
+                  src= "{{ url_for('static', filename='images/data-migration.png') }}"
                   class="card-img-top"
                   alt="Dementia Detection"
                 />
@@ -402,7 +402,7 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
             </div>
             <div class="col-md-4">
               <div class="card">
-                <img src= "{{ url_for('static', filename='static/images/blog.png') }}" class="card-img-top" alt="Quiz Game" />
+                <img src= "{{ url_for('static', filename='images/blog.png') }}" class="card-img-top" alt="Quiz Game" />
                  
                 
                 <div class="card-body">
@@ -418,7 +418,7 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
             <div class="col-md-4">
               <div class="card">
                 <img
-                  src= "{{ url_for('static', filename='static/images/logs.png') }}"
+                  src= "{{ url_for('static', filename='images/logs.png') }}"
                   class="card-img-top"
                   alt="Web Scraping"
                 />
@@ -460,7 +460,7 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
         </div>
         <div class="col-md-4">
           <div class="card">
-            <!-- <img src="static/images/blog.png" class="card-img-top" alt="Quiz Game" /> -->
+            <!-- <img src="images/blog.png" class="card-img-top" alt="Quiz Game" /> -->
             <div class="card-body">
               <h5 class="card-title">DP-100: Azure Data Scientist Associate. </h5>
               <p class="card-text">
@@ -473,7 +473,7 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
         <div class="col-md-4">
           <div class="card">
             <!-- <img
-              src="static/images/logs.png"
+              src="images/logs.png"
               class="card-img-top"
               alt="Web Scraping"
             /> -->
@@ -627,6 +627,7 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
       input.value = '';
       appendMessage('Nancy', '<span style="color:#aaa;">Typing...</span>', false, true);
       const res = await fetch('https://neha-portfolio-c76h.onrender.com/chat', {
+      // const res = await fetch('http://localhost:5000/chat', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({message: msg})

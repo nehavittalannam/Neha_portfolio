@@ -584,7 +584,7 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
     <div id="gemini-chat-widget" style="position:fixed;bottom:30px;right:30px;z-index:9999;">
       <div id="chat-box" style="display:none;width:340px;height:440px;backdrop-filter:blur(12px);background:rgba(255,255,255,0.25);border-radius:18px;box-shadow:0 8px 32px 0 rgba(31,38,135,0.37);overflow:hidden;flex-direction:column;transition:box-shadow 0.3s;">
         <div style="background:rgba(0,123,255,0.9);color:#fff;padding:14px 18px;display:flex;align-items:center;gap:10px;">
-          <img src='https://api.dicebear.com/7.x/bottts/svg?seed=Santy' alt="Santy" style="width:36px;height:36px;border-radius:50%;background:#fff;margin-right:8px;border:2px solid #fff;">
+          <img src='https://api.dicebear.com/7.x/bottts/svg?seed=Nancy' alt="Nancy" style="width:36px;height:36px;border-radius:50%;background:#fff;margin-right:8px;border:2px solid #fff;">
           <span style="font-weight:bold;font-size:1.1rem;flex:1;">Santy</span>
           <span style="font-size:1.3rem;cursor:pointer;opacity:0.7;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.7" onclick="toggleChatBox()">&times;</span>
         </div>
@@ -625,7 +625,7 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
       if (!msg) return;
       appendMessage('You', msg, true);
       input.value = '';
-      appendMessage('Santy', '<span style="color:#aaa;">Typing...</span>', false, true);
+      appendMessage('Nancy', '<span style="color:#aaa;">Typing...</span>', false, true);
       const res = await fetch('https://neha-portfolio-c76h.onrender.com/chat', {
       // const res = await fetch('http://localhost:5000/chat', {
         method: 'POST',
@@ -636,7 +636,7 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
       // Remove "Typing..." placeholder
       const chatMessages = document.getElementById('chat-messages');
       chatMessages.lastChild.remove();
-      appendMessage('Santy', data.reply, false);
+      appendMessage('Nancy', data.reply, false);
     }
     
     function appendMessage(sender, text, isUser=false, isTyping=false) {
@@ -662,8 +662,8 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
       if (!isUser) {
         // Add avatar for bot
         const avatar = document.createElement('img');
-        avatar.src = 'https://api.dicebear.com/7.x/bottts/svg?seed=Santy';
-        avatar.alt = 'Santy';
+        avatar.src = 'https://api.dicebear.com/7.x/bottts/svg?seed=Nancy';
+        avatar.alt = 'Nancy';
         avatar.style.width = '28px';
         avatar.style.height = '28px';
         avatar.style.borderRadius = '50%';

@@ -2,3 +2,4 @@ Flask
 Flask-Cors
 flask-mail
 requests
+beautifulsoup4

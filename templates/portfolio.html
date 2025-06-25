@@ -57,7 +57,7 @@
 
       /* Hero Section */
       header {
-        background: url("{{ url_for('static', filename='images/paint.png') }}") no-repeat center center/cover;
+        background: url("{{ url_for('static', filename='images/image.png') }}") no-repeat center center/cover;
         height: 100vh;
         color: white;
         display: flex;
@@ -261,13 +261,18 @@
     <!-- Hero Section -->
     <header>
 
-      <div class="container">
-        <h1>Welcome to My Portfolio</h1>
-        <p class="lead">
-          I'm Neha, Data Engineer & AI-ML Enthusiast.
-        </p>
-        <a href="#projects" class="btn btn-lg">Explore My Work</a>
-      </div>
+     <div class="container">
+  <h1>Welcome to My Portfolio</h1>
+  <p class="lead">
+    I'm Neha, Data Engineer & AI-ML Enthusiast.
+  </p>
+  <div class="d-flex flex-column align-items-center">
+    <a href="#projects" class="btn btn-lg mb-3">Explore My Work</a>
+    <a href="{{ url_for('static', filename='Neha Resume 2.0.pdf') }}" class="btn btn-outline-primary btn-lg" download>
+      <i class="fas fa-download"></i> Download Resume
+    </a>
+  </div>
+</div>
       <!-- Light/Dark Mode Toggle Icon -->
       <div class="mode-toggle" onclick="toggleMode()">
         <i id="mode-icon" class="fas fa-sun"></i>
@@ -284,8 +289,7 @@
               <div class="card-body">
                 <h5 class="card-title">Who Am I?</h5>
                 <p class="card-text">
-                  I am a passionate data engineer with a keen interest in
-                  building scalable AI solutions.
+                 I am a passionate Data Engineer and AI-ML enthusiast specializing in multi-agent AI system design, intelligent automation, and enterprise knowledge engineering. My expertise spans building robust agentic architectures, orchestrating AI collaboration, automating document and data pipelines, and developing scalable backend solutions for real-world business impact.
                 </p>
                 <!-- Styled Button with Down Arrow -->
                 <button class="dropdown-btn" onclick="toggleDropdown('dropdown-1')">
@@ -307,7 +311,7 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
               <div class="card-body">
                 <h5 class="card-title">Experience</h5>
                 <p class="card-text">
-                  Currently, Working as Data Engineer @ <strong>Consulting Private Limited. </strong> 
+                  Currently, Working as a Data Engineer and AI-ML specialist, I design and deploy multi-agent AI systems for enterprise automation. My experience includes building advanced document extraction pipelines, resilient web scraping solutions, and scalable backend services using FastAPI. My focus is on delivering efficient, real-world solutions that enhance business processes and user experiences. @ <strong> Datasturdy Consulting Private Limited. </strong> 
                   Feb 2024 - Present
                 </p>
                 <!-- Styled Button with Down Arrow -->
@@ -325,59 +329,214 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
         </div>
       </div>
     </section>
+     
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-5">
-      <div class="container">
-        <h2 class="section-title">AI Projects</h2>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card">
-              <img src="{{ url_for('static', filename='images/file.png') }}"
-                class="card-img-top"
-                alt="Dementia Detection"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Document Extraction</h5>
-                <p class="card-text">
-                  Streamlined document extraction workflows for PPT, PDF, and DOCX files,
-                  converting content for improved chatbot query responses.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img src= "{{ url_for('static', filename='images/crawling.png') }}" class="card-img-top" alt="Quiz Game" />
-              
-              <div class="card-body">
-                <h5 class="card-title">Web Scraping</h5>
-                <p class="card-text">
-                  Developed and optimized web scraping solutions to extract and store data from websites,
-                  enabling efficient retrieval and integration into chatbot systems.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img 
-                src= "{{ url_for('static', filename='images/ai-brain.png') }}"
-                class="card-img-top"
-                alt="Web Scraping"
-              />
-             
-              <div class="card-body">
-                <h5 class="card-title">Autogen-Agentic AI</h5>
-                <p class="card-text">
-                  Implemented and optimized the Autogen Multi-Agent Framework to enhance chatbot autonomy and performance in complex tasks.
-                </p>
-              </div>
-            </div>
+
+
+
+<section id="blogs" class="py-5">
+  <div class="container">
+    <h2 class="section-title">Blogs</h2>
+    <div class="text-center mb-3">
+      <button id="showBlogsBtn" class="btn btn-primary btn-lg">Show My Blogs</button>
+    </div>
+    <div id="blogsList" style="display:none;">
+      <div class="text-end mb-2">
+        <button id="closeBlogsBtn" class="btn btn-outline-danger btn-sm">Close</button>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+          <span>Building a Smart Food Calorie & Nutrition App Using Google Gemini Pro Vision API</span>
+          <button class="btn btn-outline-info btn-sm" onclick="window.open('https://datasturdy.com/building-a-smart-food-calorie-nutrition-app-using-google-gemini-pro-vision-api/', '_blank')">View Blog</button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+          <span>Simple Flask App Hosting with Render: A Complete Deployment Guide</span>
+          <button class="btn btn-outline-info btn-sm" onclick="window.open('https://datasturdy.com/simple-flask-app-hosting-with-render-a-complete-deployment-guide/', '_blank')">View Blog</button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+          <span>DeepSeek: The Rise of China’s AI Powerhouse</span>
+          <button class="btn btn-outline-info btn-sm" onclick="window.open('https://datasturdy.com/deepseek-the-rise-of-chinas-ai-powerhouse/', '_blank')">View Blog</button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+          <span>Optimizing Document Structure for Seamless AI Parsing</span>
+          <button class="btn btn-outline-info btn-sm" onclick="window.open('https://datasturdy.com/optimizing-document-structure-for-seamless-ai-parsing/', '_blank')">View Blog</button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+          <span>SWARM Technique and Handoff: A Powerful Approach to Multi-Agent Systems</span>
+          <button class="btn btn-outline-info btn-sm" onclick="window.open('https://datasturdy.com/swarm-technique-and-handoff-a-powerful-approach-to-multi-agent-systems/', '_blank')">View Blog</button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+          <span>Effortless Text Extraction from PowerPoint Presentations with Python</span>
+          <button class="btn btn-outline-info btn-sm" onclick="window.open('https://datasturdy.com/effortless-text-extraction-from-powerpoint-presentations-with-python/', '_blank')">View Blog</button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+          <span>Automated Extraction of Data from Aadhaar and PAN Cards Using EasyOCR and OpenAI</span>
+          <button class="btn btn-outline-info btn-sm" onclick="window.open('https://datasturdy.com/automated-extraction-of-data-from-aadhaar-and-pan-cards-using-easyocr-and-openai/', '_blank')">View Blog</button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+          <span>Introduction to GraphQL: A Modern API Query Language</span>
+          <button class="btn btn-outline-info btn-sm" onclick="window.open('https://datasturdy.com/introduction-to-graphql-a-modern-api-query-language/', '_blank')">View Blog</button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+          <span>Document Extraction Using Llama-Parse and Llama-Index</span>
+          <button class="btn btn-outline-info btn-sm" onclick="window.open('https://datasturdy.com/document-extraction-using-llama-parse-and-llama-index/', '_blank')">View Blog</button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+          <span>Data Extraction from PDF document: Tools and Techniques.</span>
+          <button class="btn btn-outline-info btn-sm" onclick="window.open('https://datasturdy.com/data-extraction-from-pdf-document-tools-and-techniques/', '_blank')">View Blog</button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+          <span>A Deep Dive into Object Detection: Technology, Algorithms, and Applications.</span>
+          <button class="btn btn-outline-info btn-sm" onclick="window.open('https://datasturdy.com/a-deep-dive-into-object-detection-technology-algorithms-and-applications/', '_blank')">View Blog</button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+          <span>Digital Transformation in The Education Sector.</span>
+          <button class="btn btn-outline-info btn-sm" onclick="window.open('https://datasturdy.com/digital-transformation-in-the-education-sector/', '_blank')">View Blog</button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+          <span>Pickling and Unpickling in Python</span>
+          <button class="btn btn-outline-info btn-sm" onclick="window.open('https://datasturdy.com/pickling-and-unpickling-in-python/', '_blank')">View Blog</button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+          <span>Exploring Time Series Analysis: Techniques for Data Smoothing and Forecasting</span>
+          <button class="btn btn-outline-info btn-sm" onclick="window.open('https://datasturdy.com/exploring-time-series-analysis-techniques-for-data-smoothing-and-forecasting/', '_blank')">View Blog</button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+          <span>Integrating IIS Logs into Apache Druid for Real-Time Analytics</span>
+          <button class="btn btn-outline-info btn-sm" onclick="window.open('https://datasturdy.com/integrating-iis-logs-into-apache-druid-for-real-time-analytics/', '_blank')">View Blog</button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+          <span>OBJECT DETECTION: Unleashing the Power of Computer Vision</span>
+          <button class="btn btn-outline-info btn-sm" onclick="window.open('https://datasturdy.com/object-detection-unleashing-the-power-of-computer-vision/', '_blank')">View Blog</button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+          <span>Configuring DSN with ODBC Driver and Automating Tasks with PowerShell</span>
+          <button class="btn btn-outline-info btn-sm" onclick="window.open('https://datasturdy.com/configuring-dsn-with-odbc-driver-and-automating-tasks-with-powershell/', '_blank')">View Blog</button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+          <span>Exploring Text Similarity with Spacy in NLP</span>
+          <button class="btn btn-outline-info btn-sm" onclick="window.open('https://datasturdy.com/exploring-text-similarity-with-spacy-in-nlp/', '_blank')">View Blog</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Projects Section -->
+<section id="projects" class="py-5">
+  <div class="container">
+    <h2 class="section-title">AI Projects</h2>
+    <div class="row g-4">
+
+      <!-- Document Processing Project -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/analytics.png') }}"
+            class="card-img-top"
+            alt="Document Processing"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Document Extraction & Knowledge Base Creation</h5>
+            <p class="card-text">
+              Built pipelines to extract, chunk, and index content from PDFs, PPTs, Excel, Txt and DOCX files. Used semantic and recursive chunking for RAG, enabling real-time querying by AI agents with Elasticsearch integration.
+            </p>
           </div>
         </div>
       </div>
-    </section>
+
+      <!-- Web Scraping Project -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/crawling.png') }}"
+            class="card-img-top"
+            alt="Web Scraping"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Intelligent Web Scraping & Integration</h5>
+            <p class="card-text">
+              Engineered resilient web scraping agents using Beautiful soup and Scrapy. Integrated scraped data into Elasticsearch to enrich agent knowledge, handle redirections, proxies, and support automated content updates.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Multi-Agent Framework Project -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/ai-brain.png') }}"
+            class="card-img-top"
+            alt="Multi-Agent AI"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Multi-Agent AI System Orchestration</h5>
+            <p class="card-text">
+              Designed a robust agentic architecture with Autogen and CrewAI. Orchestrated agent collaboration (e.g., SQL, Document, Vulnerabilty,Webscraping Agent) using group chat technique, ensuring memory consistency and adaptive task handling.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend API Automation -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/api.png') }}"
+            class="card-img-top"
+            alt="FastAPI Backend"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Backend Automation with FastAPI</h5>
+            <p class="card-text">
+              Built FastAPI services for document uploads, content processing, and Elasticsearch indexing. Enabled batch and real-time automation with UI integration and robust error handling.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prompt Engineering Project -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/buyer-persona_new.png') }}"
+            class="card-img-top"
+            alt="Prompt Engineering"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Prompt Engineering & Agent Persona</h5>
+            <p class="card-text">
+              Developed dynamic prompts and persona-aware agents. Aggregated chat history and metadata for personalized interactions, improving response accuracy and agent collaboration in enterprise environments.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+
+<!-- Database Chatbot Project -->
+<div class="col-md-4">
+  <div class="card">
+    <img src="{{ url_for('static', filename='images/chatbot (1).png') }}"
+      class="card-img-top"
+      alt="Database Chatbot"
+    />
+    <div class="card-body">
+      <h5 class="card-title">Database Chatbot</h5>
+      <p class="card-text">
+        Designed and deployed an API-based chatbot for natural language interaction with SQL databases.
+        Supports real-time data retrieval, query translation, and validation across five production servers.
+        Built scalable scripts for smooth deployment and continuous enhancement.
+      </p>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+
+
      <!-- Other Projects Section -->
      <section id="projects" class="py-5">
         <div class="container">
@@ -402,14 +561,13 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
             </div>
             <div class="col-md-4">
               <div class="card">
-                <img src= "{{ url_for('static', filename='images/blog.png') }}" class="card-img-top" alt="Quiz Game" />
+                <img src= "{{ url_for('static', filename='images/logs.png') }}" class="card-img-top" alt="Quiz Game" />
                  
                 
                 <div class="card-body">
-                  <h5 class="card-title">Blogs Published</h5>
+                  <h5 class="card-title">IIS Log Analytics with SQL Server</h5>
                   <p class="card-text">
-                    Authored 10 technical blogs covering topics like AI document parsing, data extraction, Graph-QL, object detection, 
-                    and time series analysis. 
+                Automated IIS log extraction and analysis using PowerShell and LogParser 2.2, centralizing 10,000+ weekly logs into SQL Server for efficient storage, querying, and reporting. Streamlined log management to improve server performance and operational visibility.
                   </p>
                   <!-- <a href="#" class="btn btn-primary">Learn More</a> -->
                 </div>
@@ -418,17 +576,15 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
             <div class="col-md-4">
               <div class="card">
                 <img
-                  src= "{{ url_for('static', filename='images/logs.png') }}"
+                  src= "{{ url_for('static', filename='images/metrics.png') }}"
                   class="card-img-top"
                   alt="Web Scraping"
                 />
                
                 <div class="card-body">
-                  <h5 class="card-title">IIS Log Analytics</h5>
-                  <p class="card-text">
-                    Automated IIS log extraction and analysis with PowerShell and LogParser 2.2, centralizing logs in 
-                    SQL Server for efficient storage and reporting, and streamlined log management for better performance.
-                  </p>
+                  <h5 class="card-title">IIS Logs Analytics with Apache Druid & Superset</h5>
+                  <p class="card-text">Integrated IIS web server logs into Apache Druid using ETL pipelines for real-time analytics and fast, ad-hoc querying. Built interactive dashboards in Apache Superset to visualize traffic patterns, user behavior, and server performance.
+                    </p>
                 </div>
               </div>
             </div>
@@ -449,27 +605,80 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
               alt="Dementia Detection"
             /> -->
             <div class="card-body">
-              <h5 class="card-title">AI-102: Azure AI Engineer Associate.
+              <h5 class="card-title"> AWS Authorized Training - Cloud Practitioner Essentials
             </h5>
               <p class="card-text">
-                I have successfully cleared Microsoft Certified on Dec 2024.              
+                I have successfully cleared AWS Certified on Jan 2023.              
             </p>
+            <a href="https://drive.google.com/file/d/18pzOYSSdNTjq2rdaRjiLgL5tGELLf9fq/view?usp=drivesdk" target="_blank" class="btn btn-primary">View Certificate</a>
               <!-- <a href="#" class="btn btn-primary">Learn More</a> -->
             </div>
           </div>
         </div>
+
+
+
         <div class="col-md-4">
           <div class="card">
             <!-- <img src="images/blog.png" class="card-img-top" alt="Quiz Game" /> -->
             <div class="card-body">
-              <h5 class="card-title">DP-100: Azure Data Scientist Associate. </h5>
+              <h5 class="card-title">DP-300: Microsoft Certified: Azure Database Administrator Associate </h5>
+              <p class="card-text">
+              I have successfully cleared Microsoft Certified on Sep 2023.
+              </p>
+            <a href="https://drive.google.com/file/d/1PjRKl0UYksDu_VM_cu1mOS0K6cjQ_UlT/view?usp=drivesdk" target="_blank" class="btn btn-primary">View Certificate</a>
+
+              <!-- <a href="#" class="btn btn-primary">Learn More</a> -->
+            </div>
+          </div>
+        </div>        
+
+        <div class="col-md-4">
+          <div class="card">
+            <!-- <img src="images/blog.png" class="card-img-top" alt="Quiz Game" /> -->
+            <div class="card-body">
+              <h5 class="card-title">AI-102: Microsoft Certified: Azure AI Engineer Associate. </h5>
               <p class="card-text">
               I have successfully cleared Microsoft Certified on July 2024.
               </p>
+            <a href="https://drive.google.com/file/d/126W8Rbx6y0fRcmclBFrxsFerFMiMAfKw/view?usp=drivesdk" target="_blank" class="btn btn-primary">View Certificate</a>
+
               <!-- <a href="#" class="btn btn-primary">Learn More</a> -->
             </div>
           </div>
         </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <!-- <img src="images/blog.png" class="card-img-top" alt="Quiz Game" /> -->
+            <div class="card-body">
+              <h5 class="card-title">DP-100: Microsoft Certified: Azure Data Scientist Associate. </h5>
+              <p class="card-text">
+              I have successfully cleared Microsoft Certified on July 2024.
+              </p>
+            <a href="https://drive.google.com/file/d/1kfwBIyewHdWIMYV_YZCDyokzAMnU5w-L/view?usp=drivesdk" target="_blank" class="btn btn-primary">View Certificate</a>
+
+              <!-- <a href="#" class="btn btn-primary">Learn More</a> -->
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4">
+          <div class="card">
+            <!-- <img src="images/blog.png" class="card-img-top" alt="Quiz Game" /> -->
+            <div class="card-body">
+              <h5 class="card-title">DP-203:Microsoft Certified: Azure Data Engineer Associate </h5>
+              <p class="card-text">
+              I have successfully cleared Microsoft Certified on June 2024.
+              </p>
+            <a href="https://drive.google.com/file/d/1jBwwM3moxYMi8zEly3ZfdYtFj6sesC-1/view?usp=drivesdk" target="_blank" class="btn btn-primary">View Certificate</a>
+
+              <!-- <a href="#" class="btn btn-primary">Learn More</a> -->
+            </div>
+          </div>
+        </div>
+
         <div class="col-md-4">
           <div class="card">
             <!-- <img
@@ -478,18 +687,21 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
               alt="Web Scraping"
             /> -->
             <div class="card-body">
-              <h5 class="card-title">DP-203:Azure Data Engineer Associate</h5>
-              <p class="card-text"> I have successfully cleared Microsoft Certified on June 2024.
+              <h5 class="card-title"> DP-600: Microsoft Certified: Fabric Analytics Engineer Associate. </h5>
+              <p class="card-text"> I have successfully cleared Microsoft Certified on June 2025.
              </p>
+            <a href="https://drive.google.com/file/d/1QK7Us6LPeGReJoGHGR_g0k4Ioso4L0K8/view?usp=drivesdk" target="_blank" class="btn btn-primary">View Certificate</a>
+
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-      <!--
-    <!-- Skills Section -->
-      <section id="skills" class="py-5">
+
+
+
+<section id="skills" class="py-5">
         <div class="container">
           <h2 class="section-title">Skills</h2>
           <div class="row g-4">
@@ -497,14 +709,26 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
               <h5>Technical Skills</h5>
               <ul>
                 <li>
-                  <strong>Languages:</strong> Python, SQL, HTML,
-                  CSS
+                  <strong>Languages:</strong> Python, SQL, HTML, CSS, JavaScript
                 </li>
                 <li>
-                  <strong>AI/ML:</strong> LLM, Autogen, CrewAI, Tessaract, EasyOCR, 
-                  OpenAI, Azure Cognitive services, LlamaIndex, ElasticSearch.
+                  <strong>AI/ML & LLMs:</strong> Autogen, CrewAI, Retrieval-Augmented Generation (RAG), Prompt Engineering, LlamaIndex, OpenAI, Azure Cognitive Services, LangChain, Persona & Memory Management
                 </li>
-                <li><strong>Tools:</strong>Power BI, VS Code</li>
+                <li>
+                  <strong>Document & Data Processing:</strong> Docling, LlamaParse, EasyOCR, Tesseract, PDF/PPT/DOCX Extraction, Semantic & Recursive Chunking, Metadata Management
+                </li>
+                <li>
+                  <strong>Web Scraping & Integration:</strong> Selenium, Scrapy, BeautifulSoup, Octoparse, Proxy Handling, Error Management, Data Pipelines
+                </li>
+                <li>
+                  <strong>Backend & APIs:</strong> FastAPI, RESTful API Design, Swagger UI, Batch & Real-time Automation, Error Handling
+                </li>
+                <li>
+                  <strong>Databases & Search:</strong> Elasticsearch, SQL Server, MySQL, Knowledge Base Indexing, Real-time Querying
+                </li>
+                <li>
+                  <strong>Dev Tools & Others:</strong> Power BI, VS Code, Git, LogParser, PowerShell, Linux/Windows Automation
+                </li>
               </ul>
             </div>
             <div class="col-md-6">
@@ -524,22 +748,43 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
                   role="progressbar"
                   style="width: 90%"
                 >
-                  AI/ML - 90%
+                  AI/ML & LLMs - 90%
                 </div>
               </div>
               <div class="progress mb-3">
                 <div
                   class="progress-bar bg-warning"
                   role="progressbar"
+                  style="width: 85%"
+                >
+                  Data Engineering - 85%
+                </div>
+              </div>
+              <div class="progress mb-3">
+                <div
+                  class="progress-bar bg-primary"
+                  role="progressbar"
                   style="width: 80%"
                 >
-                  SQL - 80%
+                  SQL/Databases - 80%
+                </div>
+              </div>
+              <div class="progress mb-3">
+                <div
+                  class="progress-bar bg-secondary"
+                  role="progressbar"
+                  style="width: 75%"
+                >
+                  Web Scraping & Automation - 75%
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+
+
     <!-- Contact Section -->
     <section id="contact" class="py-5 bg-dark text-white">
       <div class="container">
@@ -585,7 +830,7 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
       <div id="chat-box" style="display:none;width:340px;height:440px;backdrop-filter:blur(12px);background:rgba(255,255,255,0.25);border-radius:18px;box-shadow:0 8px 32px 0 rgba(31,38,135,0.37);overflow:hidden;flex-direction:column;transition:box-shadow 0.3s;">
         <div style="background:rgba(0,123,255,0.9);color:#fff;padding:14px 18px;display:flex;align-items:center;gap:10px;">
           <img src='https://api.dicebear.com/7.x/bottts/svg?seed=Nancy' alt="Nancy" style="width:36px;height:36px;border-radius:50%;background:#fff;margin-right:8px;border:2px solid #fff;">
-          <span style="font-weight:bold;font-size:1.1rem;flex:1;">Santy</span>
+          <span style="font-weight:bold;font-size:1.1rem;flex:1;">Nancy</span>
           <span style="font-size:1.3rem;cursor:pointer;opacity:0.7;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.7" onclick="toggleChatBox()">&times;</span>
         </div>
         <div id="chat-messages" style="flex:1;overflow-y:auto;padding:16px 14px 10px 14px;height:320px;">
@@ -684,6 +929,136 @@ Class 10th at <strong>Annie Besant Convert and High School</strong> 2015  (80.19
       });
     });
     </script>
+<!-- Gemini Chat Widget (Modern Glassmorphism UI) -->
+<div id="gemini-chat-widget" style="position:fixed;bottom:30px;right:30px;z-index:9999;">
+<div id="chat-box" style="display:none;width:340px;height:440px;backdrop-filter:blur(12px);background:rgba(255,255,255,0.25);border-radius:18px;box-shadow:0 8px 32px 0 rgba(31,38,135,0.37);overflow:hidden;flex-direction:column;transition:box-shadow 0.3s;">
+<div style="background:rgba(0,123,255,0.9);color:#fff;padding:14px 18px;display:flex;align-items:center;gap:10px;">
+<img src='https://api.dicebear.com/7.x/bottts/svg?seed=Santy' alt="Santy" style="width:36px;height:36px;border-radius:50%;background:#fff;margin-right:8px;border:2px solid #fff;">
+<span style="font-weight:bold;font-size:1.1rem;flex:1;">Santy</span>
+<span style="font-size:1.3rem;cursor:pointer;opacity:0.7;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.7" onclick="toggleChatBox()">&times;</span>
+</div>
+<div id="chat-messages" style="flex:1;overflow-y:auto;padding:16px 14px 10px 14px;height:320px;">
+<!-- Messages will appear here -->
+</div>
+<div style="display:flex;align-items:center;padding:10px 12px;background:rgba(255,255,255,0.15);backdrop-filter:blur(8px);">
+<input id="chat-input" type="text" placeholder="Type your message..." style="flex:1;border:none;padding:10px 14px;border-radius:20px;background:rgba(255,255,255,0.7);margin-right:8px;outline:none;font-size:1rem;transition:background 0.2s;">
+<button onclick="sendMessage()" style="background:linear-gradient(90deg,#007bff 60%,#00c6ff 100%);color:#fff;border:none;padding:10px 18px;border-radius:20px;font-weight:bold;box-shadow:0 2px 8px rgba(0,123,255,0.15);transition:background 0.2s,box-shadow 0.2s;cursor:pointer;">
+<i class="fas fa-paper-plane"></i>
+</button>
+</div>
+</div>
+<button id="open-chat-btn" onclick="toggleChatBox()" style="background:linear-gradient(135deg,#007bff 60%,#00c6ff 100%);color:#fff;border:none;border-radius:50%;width:64px;height:64px;font-size:2.1rem;box-shadow:0 4px 16px rgba(0,123,255,0.25);transition:box-shadow 0.2s;">
+<i class="fas fa-comments"></i>
+</button>
+</div>
+<!-- Stylish Glassmorphism Modal (Smaller Width) -->
+<div class="modal fade" id="userInfoModal" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" style="max-width: 400px;">
+<div class="modal-content border-0 rounded-4 shadow-lg"
+         style="backdrop-filter: blur(14px); background: rgba(255, 255, 255, 0.1); color: white;">
+<form id="user-info-form">
+<div class="modal-header border-0">
+<h5 class="modal-title" style="font-weight: 600;">👋 Welcome! Tell us about you</h5>
+<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<label for="name" class="form-label">Your Name</label>
+<input type="text" class="form-control mb-3 rounded-3" id="name" name="name"
+                 style="background-color: rgba(255, 255, 255, 0.7);" />
+ 
+          <label for="contactInfo" class="form-label">Organization / Contact (optional)</label>
+<input type="text" class="form-control rounded-3" id="contactInfo" name="contactInfo"
+                 style="background-color: rgba(255, 255, 255, 0.7);" />
+</div>
+<div class="modal-footer border-0">
+<button type="submit" class="btn btn-primary rounded-pill px-4">Submit</button>
+<button type="button" class="btn btn-outline-light rounded-pill px-4" data-bs-dismiss="modal">Close</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<script>
+  window.addEventListener('load', function () {
+  const modalElement = document.getElementById('userInfoModal');
+  const nameInput = document.getElementById('name');
+  const contactInput = document.getElementById('contactInfo');
+  const form = document.getElementById('user-info-form');
+ 
+  if (!modalElement || !form || !nameInput || !contactInput) return;
+ 
+  const shown = localStorage.getItem('userInfoShown');
+  if (!shown) {
+    const modal = new bootstrap.Modal(modalElement);
+    modal.show();
+    localStorage.setItem('userInfoShown', 'true');
+  }
+ 
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const name = nameInput.value.trim();
+    const contact = contactInput.value.trim();
+ 
+    // Close modal immediately
+    bootstrap.Modal.getInstance(modalElement).hide();
+ 
+    // If nothing is filled, skip sending
+    if (!name && !contact) return;
+ 
+    // Send data in background
+    fetch('/submit-info', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, contact }),
+    }).catch(err => {
+      console.error('Error sending visitor info:', err);
+    });
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  fetch("/latest-blogs")
+    .then(res => res.json())
+    .then(posts => {
+      const blogList = document.getElementById("blog-list");
+      if (!posts.length) {
+        blogList.innerHTML = "<li class='list-group-item'>No blogs found.</li>";
+        return;
+      }
+      posts.forEach(post => {
+        const li = document.createElement("li");
+        li.className = "list-group-item";
+        li.innerHTML = `<a href="${post.url}" target="_blank">${post.title}</a>`;
+        blogList.appendChild(li);
+      });
+    })
+    .catch(() => {
+      document.getElementById("blog-list").innerHTML = "<li class='list-group-item'>Could not load blogs.</li>";
+    });
+});
+</script>
+
+<script>
+  // Show blogs on button click
+  document.addEventListener("DOMContentLoaded", function() {
+    var btn = document.getElementById('showBlogsBtn');
+    var list = document.getElementById('blogsList');
+    var closeBtn = document.getElementById('closeBlogsBtn');
+    if (btn) {
+      btn.onclick = function() {
+        list.style.display = 'block';
+        btn.style.display = 'none';
+      };
+    }
+    if (closeBtn) {
+      closeBtn.onclick = function() {
+        list.style.display = 'none';
+        btn.style.display = 'inline-block';
+      };
+    }
+  });
+</script>
 
   </body>
 </html>
